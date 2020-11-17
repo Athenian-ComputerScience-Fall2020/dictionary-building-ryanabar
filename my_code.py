@@ -2,20 +2,13 @@
 #  stackoverflow
 
 
-store_list = []
+store_list = {}
 
-while (True):
-    name = input("Give the name of the owner of the store you want to add: ")
-    customers = input("Total number of customers per day (seperated by spaces): ").split(" ")
-    sales = input("Total number of sales per day (seperated by spaces): ").split(" ")
-    staff = input("Total number of staff per day (seperated by spaces): ").split(" ")
+while True:
+    name = input("Give the name of the restaurant: ")
+    foodType = input("What food type does this restaurant serve? ")
 
-    store_list.append({
-        "name": name,
-        "customers": customers,
-        "sales": sales,
-        "staff": staff
-    })
+    store_list[name] = foodType
 
     cont = input("Want to add another store? Please say yes or no. ")
     if cont == "no":
